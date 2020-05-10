@@ -8,7 +8,7 @@ It allows you to create a credential to specify Conjur connection details and yo
 For Configuration you only need to create the credential.
 You must select Conjure Secret Credential.
 
-![Credential Sample](src/main/resources/createcedential.png)
+![Credential Sample](src/main/resources/createcredential.png)
 
 
 **Account**: This is your Account created in Conjur the conjur admin can provide you with this data.
