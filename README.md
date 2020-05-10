@@ -33,7 +33,7 @@ You must select Conjure Secret Credential.
 ## Usage Sample
 This is a short pipeline example on how to use this in a Pipeline.
 As you can see you have to specify the **sPath** parameter to define de Real Secret to be retrieved.
-``
+```
 pipeline{
 agent any
     stages {
