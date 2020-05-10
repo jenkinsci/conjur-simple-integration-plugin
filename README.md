@@ -19,9 +19,7 @@ You must select Conjure Secret Credential.
 
 **Username/Host**: Here you must specify the username or host you were provided to access to your Secrets. Be aware that you should use the following format example depending if you are using USER or a HOST: (Do not include the "USER:" or "HOST:")
 
-
 	**USER**:`usr@pipu.kk.com`
-
 
 	**HOST**:`host/projects/project012/test/hosts/host1`
 
