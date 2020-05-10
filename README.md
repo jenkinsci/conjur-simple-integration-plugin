@@ -18,9 +18,8 @@ You must select Conjure Secret Credential.
 
 
 **Username/Host**: Here you must specify the username or host you were provided to access to your Secrets. Be aware that you should use the following format example depending if you are using USER or a HOST: (Do not include the "USER:" or "HOST:")
-
-	**USER**:`usr@pipu.kk.com`
-	**HOST**:`host/projects/project012/test/hosts/host1`
+  **USER**:`usr@pipu.kk.com`
+  **HOST**:`host/projects/project012/test/hosts/host1`
 
 
 **Password**: This is the APIKEY for your user/Host.
@@ -34,22 +33,22 @@ You must select Conjure Secret Credential.
 ## Usage Sample
 This is a short pipeline example on how to use this in a Pipeline.
 As you can see you have to specify the **sPath** parameter to define de Real Secret to be retrieved.
-
-    pipeline{
-    agent any
-        stages {
-            stage("Testing Conjur Simple Credential)") {
-                steps{
-                    withCredentials([[$class: 'ConjurSecretApplianceCredentialsBinding'
-                                        , credentialsId: 'MyCredential'
-                                        ,sPath: 'projects/project012/test/variables/variable1'
-                                        ,variable: 'SECRETO2']
-                                    ]) {
-                    echo "Test no dumping of credential: ${env.SECRETO2}"
-                    }//withcredentials
-                }// steps
-            } //Stage
-        }
-    }// pipeline
-
+``
+pipeline{
+agent any
+    stages {
+        stage("Testing Conjur Simple Credential)") {
+            steps{
+                withCredentials([[$class: 'ConjurSecretApplianceCredentialsBinding'
+                                    , credentialsId: 'MyCredential'
+                                    ,sPath: 'projects/project012/test/variables/variable1'
+                                    ,variable: 'SECRETO2']
+                                ]) {
+                echo "Test no dumping of credential: ${env.SECRETO2}"
+                }//withcredentials
+            }// steps
+        } //Stage
+    }
+}// pipeline
+```
 
