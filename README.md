@@ -8,15 +8,30 @@ It allows you to create a credential to specify Conjur connection details and yo
 For Configuration you only need to create the credential.
 You must select Conjure Secret Credential.
 
-![Credential Sample](src/main/resources/createcedential.png)
+![Credential Sample][src/main/resources/createcedential.png]
+
 
 **Account**: This is your Account created in Conjur the conjur admin can provide you with this data.
+
+
 **Appliance URL**: Is the url for your appliance including the "https://" part.
+
+
 **Username/Host**: Here you must specify the username or host you were provided to access to your Secrets. Be aware that you should use the following format example depending if you are using USER or a HOST: (Do not include the "USER:" or "HOST:")
+
+
 	**USER**:`usr@pipu.kk.com`
+
+
 	**HOST**:`host/projects/project012/test/hosts/host1`
+
+
 **Password**: This is the APIKEY for your user/Host.
+
+
 **ID**: As in any Jenkins Credential this is the ID you will be refering in the code.
+
+
 **Description**: This is a description to help you identify this Credential.
 
 ## Usage Sample
