@@ -8,7 +8,7 @@
         <relativePath />
     </parent>
     <groupId>io.jenkins.plugins</groupId>
-    <artifactId>ConjurSimpleIntegration</artifactId>
+    <artifactId>conjur-simple-integration</artifactId>
     <version>0.0.1</version>
     <packaging>hpi</packaging>
     <properties>
@@ -22,14 +22,14 @@
             <url>https://opensource.org/licenses/MIT</url>
         </license>
     </licenses>
-    <!-- Assuming you want to host on @jenkinsci:
+    <!--Assuming you want to host on @jenkinsci:-->
     <url>https://github.com/jenkinsci/${project.artifactId}-plugin</url>
     <scm>
         <connection>scm:git:git://github.com/jenkinsci/${project.artifactId}-plugin.git</connection>
         <developerConnection>scm:git:git@github.com:jenkinsci/${project.artifactId}-plugin.git</developerConnection>
         <url>https://github.com/jenkinsci/${project.artifactId}-plugin</url>
     </scm>
-    -->
+    
     <repositories>
         <repository>
             <id>repo.jenkins-ci.org</id>
