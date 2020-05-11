@@ -68,31 +68,31 @@ public class ConjurSecretApplianceCredentialsImpl extends BaseStandardCredential
         }
 
         public String getCredentialID() {
-                LOGGER.log(Level.INFO, "Get Credentials");
+//                LOGGER.log(Level.INFO, "Get Credentials");
                 return credentialID;
         }
 
         @DataBoundSetter
         public void setCredentialID(String credentialID) {
-                LOGGER.log(Level.INFO, "Set Credentials");
+//                LOGGER.log(Level.INFO, "Set Credentials");
                 this.credentialID = credentialID;
         }
 
         @Override
         public String getDisplayName() {
-                 LOGGER.log(Level.INFO, "getDisplayName");
+//                 LOGGER.log(Level.INFO, "getDisplayName");
                  return "Conjur Secret Credential Appliance";
         }
 
         @Override
         public String getNameTag() {
-            LOGGER.log(Level.INFO, "getNameTag");
+//            LOGGER.log(Level.INFO, "getNameTag");
 
             return "/*Conjur*";
         }
 
         public Secret getSecret(String sPath) {
-            LOGGER.log(Level.INFO, "getSecret Wpath");
+//            LOGGER.log(Level.INFO, "getSecret Wpath");
                     String result = "";
                     try {
                             // initiate conjurAuthn //not sure if can be done in constructor. or via setter/getters.
@@ -116,7 +116,7 @@ public class ConjurSecretApplianceCredentialsImpl extends BaseStandardCredential
                             LOGGER.log(Level.WARNING, "EXCEPTION: " + e.getMessage());
                             throw new InvalidConjurSecretException(e.getMessage(), e);
                     }
-                    LOGGER.log(Level.INFO, "Top Secret: "+ result);
+//                    LOGGER.log(Level.INFO, "Top Secret: "+ result);
                     return Secret.fromString(result);
         }
 
@@ -128,29 +128,29 @@ public class ConjurSecretApplianceCredentialsImpl extends BaseStandardCredential
     */
         @Override
         public void setContext(Run<?, ?> context) {
-            LOGGER.log(Level.INFO, "Set Context");
+//            LOGGER.log(Level.INFO, "Set Context");
             if (context != null)
                     this.context = context;
         }
         @Override
         public String getAccount() {
-            LOGGER.log(Level.INFO, "getAccount");
+//            LOGGER.log(Level.INFO, "getAccount");
             return account;
         }
 
         @DataBoundSetter
         public void setAccount(String account) {
-            LOGGER.log(Level.INFO, "setAccount");
+//            LOGGER.log(Level.INFO, "setAccount");
             this.account = account;
         }
         @Override
         public String getApplianceURL() {
-            LOGGER.log(Level.INFO, "getApplianceUrl");
+//            LOGGER.log(Level.INFO, "getApplianceUrl");
             return applianceURL;
         }
         @DataBoundSetter
         public void setApplianceURL(String applianceURL) {
-            LOGGER.log(Level.INFO, "SetApplianceUrl");
+//            LOGGER.log(Level.INFO, "SetApplianceUrl");
             this.applianceURL = applianceURL;
         }
         @Override
@@ -163,12 +163,12 @@ public class ConjurSecretApplianceCredentialsImpl extends BaseStandardCredential
         }
         @Override
         public Secret getcjPassword() {
-            LOGGER.log(Level.INFO, "getPassword");
+//            LOGGER.log(Level.INFO, "getPassword");
             return cjPassword;
         }
         @DataBoundSetter
         public void setcjPassword(Secret cjPassword) {
-            LOGGER.log(Level.INFO, "SetPassword");
+//            LOGGER.log(Level.INFO, "SetPassword");
             this.cjPassword = cjPassword;
         }
 

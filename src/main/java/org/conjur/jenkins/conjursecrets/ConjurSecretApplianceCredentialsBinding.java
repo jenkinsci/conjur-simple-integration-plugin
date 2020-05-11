@@ -50,20 +50,20 @@ public class ConjurSecretApplianceCredentialsBinding extends MultiBinding<Conjur
     @DataBoundConstructor
     public ConjurSecretApplianceCredentialsBinding(String credentialsId) {
 	super(credentialsId);
-        LOGGER.log(Level.INFO, "Constructor binding");
+//        LOGGER.log(Level.INFO, "Constructor binding");
         
     }
     
     @Override
     protected Class<ConjurSecretApplianceCredentials> type() {
-        LOGGER.log(Level.INFO, "Binding Type");
+//        LOGGER.log(Level.INFO, "Binding Type");
         return ConjurSecretApplianceCredentials.class;
     }
 
     @Override
     public MultiEnvironment bind(Run<?, ?> build, FilePath workSpace, Launcher launcher, TaskListener listener)
                     throws IOException, InterruptedException {
-             LOGGER.log(Level.INFO, "Binding Bind");
+//             LOGGER.log(Level.INFO, "Binding Bind");
             ConjurSecretApplianceCredentials ConjurSecretApplianceCredentials = getCredentials(build);
             ConjurSecretApplianceCredentials.setContext(build);
 
@@ -73,23 +73,23 @@ public class ConjurSecretApplianceCredentialsBinding extends MultiBinding<Conjur
     
     @DataBoundSetter
     public void setVariable(String variable) {
-            LOGGER.log(Level.INFO, "Setting variable to {0}", variable);
+//            LOGGER.log(Level.INFO, "Setting variable to {0}", variable);
             this.variable = variable;
     }
 
     @Override
     public Set<String> variables() {
-        LOGGER.log(Level.INFO, "Binding Variables");
+//        LOGGER.log(Level.INFO, "Binding Variables");
         return Collections.singleton(variable);
     }
     //@Override
     public String getsPath() {
-         LOGGER.log(Level.INFO, "BsetSpath");
+//         LOGGER.log(Level.INFO, "BsetSpath");
         return sPath;
     }
     @DataBoundSetter
     public void setsPath(String sPath) {
-         LOGGER.log(Level.INFO, "BgetSpath");
+//         LOGGER.log(Level.INFO, "BgetSpath");
         this.sPath = sPath;
     }    
 }
