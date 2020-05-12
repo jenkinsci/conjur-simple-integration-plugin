@@ -36,7 +36,6 @@
         <email>mcamposv@gmail.com</email>
       </developer>
     </developers>
-    <url>https://github.com/jenkinsci/conjur-simple-integration-plugin</url>
     <repositories>
         <repository>
             <id>repo.jenkins-ci.org</id>
